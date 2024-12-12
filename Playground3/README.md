@@ -113,3 +113,6 @@ Again a Recap of the Problem : The issue is that developers accessing the Hasura
 Visual representation of the flow:
 ![alt text](image-6.png)
 
+---
+[Back to Home](../../README.md)
+---

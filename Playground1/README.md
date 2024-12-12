@@ -55,3 +55,8 @@ docker-compose up
 6. Open your browser and navigate to `http://localhost` and you should see the banner.
 
 ![Banner in the Prod environment example](image.png)
+
+---
+[Back to the main README](../README.md)
+
+[Navigate to Playground 2](../Playground2/README.md)

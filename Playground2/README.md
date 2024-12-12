@@ -35,3 +35,8 @@ When a user connects to Hasura, their access depends on the secret they provide:
 
 If I enter the prod key in staging : 
 ![alt text](image-5.png)
+
+---
+[Back to the main README](../README.md)
+
+[Navigate to Playground 3](../Playground3/README.md)
