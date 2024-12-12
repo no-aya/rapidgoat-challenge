@@ -114,5 +114,5 @@ Visual representation of the flow:
 ![alt text](image-6.png)
 
 ---
-[Back to Home](../../README.md)
+[Back to Home](../README.md)
 ---
