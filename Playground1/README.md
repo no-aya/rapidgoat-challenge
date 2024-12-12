@@ -1,4 +1,4 @@
-# Playground 1
+# Playground 1 : Reverse proxy to change the display
 
 Here we are going to explore the first solution, which is to use the reverse proxy NGINX to insert a banner to make the difference between the production page and the staging page. 
 
@@ -9,18 +9,10 @@ Notes about the solution:
 - In this demo we're using Docker to run the Hasura instance and the NGINX reverse proxy. We will only simulate the production environment.
 
 ## Steps
-
-1. Create a new directory and navigate to it.
-
-```bash
-mkdir playground1
-cd playground1
-```
-
-2. Pull the docker images for Hasura 
+1. Pull the docker images for Hasura 
 [Hasura Docker](https://hasura.io/docs/2.0/getting-started/docker-simple/)
 
-3. Go to the [docker-compose file](docker-compose.yml) and add the following configuration:
+2. Go to the [docker-compose file](docker-compose.yml) and add the following configuration:
 
 ```yaml
  nginx:
@@ -33,7 +25,7 @@ cd playground1
       - graphql-engine
 ```
 
-4. Create a new file called `nginx.conf` and add the following configuration:
+3. Create a new file called `nginx.conf` and add the following configuration:
 
 ```nginx
 server {
@@ -54,7 +46,7 @@ server {
 
 Now ofc you can change the banner to whatever you want, and you can also change the color, the text, and the position of the banner, it's just an example with basic HTML and CSS.
 
-5. Run the docker-compose file:
+4. Run the docker-compose file:
 
 ```bash
 docker-compose up

@@ -1,4 +1,4 @@
-# **Environment Separation Using Secrets**
+# Playground 2 : **Environment Separation Using Secrets**
 
 #### **1. Environment-Specific Admin Secrets**
 Hasura’s admin secret provides unrestricted access to the console. To enforce environment separation:

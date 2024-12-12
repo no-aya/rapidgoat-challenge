@@ -1,4 +1,4 @@
-# Hasura Actions and Backend Logic
+# Playground 3 : Hasura Actions and Backend Logic
 Basically, Hasura Actions allow you to define custom business logic that can be invoked via a GraphQL query or mutation. We will use it to solve the prod vs. staging environment challenge.
 
 What's expected from the backend is to validate the metadata change and request confirmation before executing the operation. We will use Node.js with Express for this.
