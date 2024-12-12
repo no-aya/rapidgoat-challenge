@@ -11,12 +11,12 @@ The first solution is to use the reverse proxy server to do a little twist on th
 
 ## Solution 2 : Environment separation using secrets
 The second solution is to use environment-specific admin secrets to enforce environment separation. This way, you can ensure that only trusted users have access to the production environment.
-![alt text](image.png)
+![alt text](img/image-2.png)
 - Check the steps here: [Solution 2](Playground2/README.md)
 
 ## Solution 3 : Create a validation backend and integrate wth Hasura Actions
 The third solution is to create a validation backend and integrate it with Hasura Actions. This way, you can validate metadata changes before applying them to the database.
-![alt text](image-1.png)
+![alt text](img/image-1.png)
 
 - Check the steps here: [Solution 3](Playground3/README.md)
 
