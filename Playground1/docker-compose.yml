@@ -6,6 +6,8 @@ services:
       - db_data:/var/lib/postgresql/data
     environment:
       POSTGRES_PASSWORD: postgrespassword
+    networks:
+      - hasura-network
   graphql-engine:
     image: hasura/graphql-engine:v2.42.0
     ports:
@@ -29,6 +31,8 @@ services:
     depends_on:
       data-connector-agent:
         condition: service_healthy
+    networks:
+      - hasura-network
   data-connector-agent:
     image: hasura/graphql-data-connector:v2.42.0
     restart: always
@@ -45,6 +49,20 @@ services:
       timeout: 10s
       retries: 5
       start_period: 5s
+    networks:
+      - hasura-network
+
+  validation-backend:
+    image: hasura-validation-backend:latest
+    build:
+      context: ../Playground3/hasura-validation-backend
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+    networks:
+      - hasura-network
+
 
   nginx:
     image: nginx:latest
@@ -54,6 +72,14 @@ services:
       - ./nginx.conf:/etc/nginx/conf.d/default.conf
     depends_on:
       - graphql-engine
+    networks:
+      - hasura-network
+
+  
 
 volumes:
   db_data:
+
+networks:
+  hasura-network:
+    driver: bridge
